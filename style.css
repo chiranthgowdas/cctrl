@@ -1,0 +1,109 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #33ff00;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    cursor: url('https://i.imgur.com/BoNUdx5.png'), auto; /* Hackerish cursor */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav a {
+    color: #33ff00;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+#map {
+    height: 60vh;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#info, #user_input, #user_info {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #33ff00;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.table-container {
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #33ff00;
+    animation: fadeIn 0.5s forwards;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #33ff00;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a1a1a;
+}
+
+tr:nth-child(even) {
+    background-color: #262626;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-in-right {
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s; /* Delays the fade-in effect */
+}
+
+.slide-up {
+    animation: slideUp 0.5s forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    #map {
+        height: 50vh;
+    }
+
+    #info, #user_input, #user_info {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}

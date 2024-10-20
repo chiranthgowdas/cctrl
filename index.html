@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Crowd Density Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1 class="fade-in">Real-Time Crowd Density Tracker</h1>
+
+    <nav>
+        <a href="developers.html" class="fade-in">Developers</a>
+        <a href="#info" class="fade-in">Scroll Down</a>
+    </nav>
+
+    <div id="map" class="slide-up"></div>
+
+    <div id="info" class="fade-in">
+        <p>Total People: <span id="people_count">0</span></p>
+        <p>Density: <span id="density">0</span> people/km²</p>
+        <p>Overcrowding Probability: <span id="overcrowding_prob">0</span></p>
+        <p>GPS Accuracy: <span id="accuracy">0</span> meters</p>
+        <p>Distance to Second User: <span id="distance">0</span> km</p>
+    </div>
+
+    <div id="user_input" class="fade-in">
+        <h2>Enter 2nd User Coordinates</h2>
+        <label for="lat2">Latitude:</label>
+        <input type="number" id="lat2" placeholder="Enter Latitude" step="any" required>
+        <label for="lon2">Longitude:</label>
+        <input type="number" id="lon2" placeholder="Enter Longitude" step="any" required>
+        <button onclick="calculateDistance()">Calculate Distance</button>
+    </div>
+
+    <div id="user_info" class="fade-in-right">
+        <h3>User Info</h3>
+        <p>Latitude: <span id="user_lat">0</span></p>
+        <p>Longitude: <span id="user_lon">0</span></p>
+        <p>IP Address: <span id="user_ip">Loading...</span></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
